@@ -1,5 +1,5 @@
 **Test the Extension**
-Open Chrome and navigate to chrome://extensions/.
-Enable Developer Mode.
-Click Load unpacked and select your project folder.
-Open Gmail to test the extension.
+1. Open Chrome and navigate to chrome://extensions/. \n
+2. Enable Developer Mode.
+3. Click Load unpacked and select your project folder.
+4. Open Gmail to test the extension.
