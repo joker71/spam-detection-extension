@@ -1,12 +1,14 @@
 // Detect email content
 document.addEventListener('DOMContentLoaded', () => {
+    alert(emails)
     const emails = document.querySelectorAll('.message');
     console.log(emails)// Adjust selector for Gmail
     emails.forEach(email => {
         const content = email.innerText || email.textContent;
 
         // Example keyword-based spam detection
-        const spamKeywords = ["lottery", "win", "urgent", "prize"];
+        const spamKeywords = ["lottery", "win", "urgent", "prize", 'joker71!'];
+        this.analyzeEmail(content)
         if (spamKeywords.some(keyword => content.includes(keyword))) {
             email.style.border = "2px solid red"; // Highlight spam emails
             email.title = "This email might be spam.";

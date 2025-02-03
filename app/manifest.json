@@ -3,8 +3,8 @@
   "name": "Spam Email Detector",
   "version": "1.0",
   "description": "Detect and flag spam emails in Gmail.",
-  "permissions": ["scripting", "activeTab"],
-  "host_permissions": ["https://mail.google.com/*"],
+  "permissions": ["scripting", "storage", "activeTab"],
+  "host_permissions": ["https://*/*"],
   "action": {
     "default_popup": "popup.html",
     "icons": {
@@ -18,7 +18,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://mail.google.com/*"],
+      "matches": ["<all_urls>"], 
       "js": ["content.js"]
     }
   ]
