@@ -29,7 +29,7 @@ def predict_spam(text):
     return {
         "is_spam": bool(predicted_class),
         "confidence": confidence,
-        "prediction": "spam" if predicted_class == 1 else "ham"
+        "prediction": "spam" if predicted_class == 1 else "not spam"
     }
 
 @app.route("/health", methods=["GET"])
