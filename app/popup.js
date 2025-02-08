@@ -14,7 +14,7 @@ document.getElementById("detectButton").addEventListener("click", () => {
                     return;
                 }
                 const isSpam = injectionResults[0].result;
-                console.log(111111, isSpam, injectionResults)
+
                 const result = isSpam ? "Likely Spam!" : "Probably Not Spam.";
                 resultDiv.textContent = isSpam ? "Likely Spam!" : "Probably Not Spam.";
                 // alert(result)
@@ -48,7 +48,6 @@ async function detectSpam() {
 
     var myHeaders = new Headers();
     myHeaders.append("apikey", "l81IbatyWUPloZU4AvQGl7dH61v6HzLu");
-    console.log(1212)
 
     var requestOptions = {
         method: "POST",
@@ -68,7 +67,6 @@ async function detectSpam() {
         const data = await response.json();
 
         if (response.ok) {
-            console.log('Prediction:', data); // This will log the result of the prediction
             alert('Prediction: Email is ' + data.prediction)
             return  data.is_spam
         } else {
