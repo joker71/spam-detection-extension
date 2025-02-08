@@ -4,7 +4,7 @@
 
 This repository contains the machine learning model for email spam detection, designed to be used with the spam detection browser extension.
 
-~~## Project Structure~~
+## Project Structure
 
 ```
 model/
