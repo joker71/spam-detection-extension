@@ -1,8 +1,12 @@
 from flask import Flask, request, jsonify
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch
+from flask_cors import CORS  # Import CORS
 
 app = Flask(__name__)
+
+# Enable CORS for the entire app
+CORS(app)
 
 # Load model and tokenizer
 MODEL_NAME = "jamesnq/email_spam_model"
@@ -49,4 +53,4 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True, host="0.0.0.0", port=5001)
