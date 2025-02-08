@@ -1,4 +1,4 @@
-
+![Overall System Architect](/EmailSpam-Ver1.2.png)
 # Project Structure
 # Email Spam Detection Model
 
